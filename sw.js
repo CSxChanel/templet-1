@@ -1,16 +1,26 @@
 const CACHE_NAME = "voucher-app-v1.0.2";
 const urlsToCache = [
-    "/tamplat-voucher/",
-    "/tamplat-voucher/index.html",
-    "/tamplat-voucher/css/tailwind.min.css",
-    "/tamplat-voucher/css/main.css",
-    "/tamplat-voucher/img/icon.webp",
-    "/tamplat-voucher/img/icon2.webp",
-    "/tamplat-voucher/manifest.json",
-    "/tamplat-voucher/login_js/owl.carousel.min.js",
-    "/tamplat-voucher/login_js/owl.carousel.js",
-    "/tamplat-voucher/login_js/datehijri.js",
-    "/tamplat-voucher/login_js/main.js"
+    "/templet-1/",
+    "/templet-1/index.html",
+    "/templet-1/css/tailwind.css",
+    "/templet-1/png/telegram.png",
+    "/templet-1/png/facebook.png",
+    "/templet-1/png/whatsapp.png",
+    "/templet-1/png/dummy-user.png",
+    "/templet-1/png/unlocked.png",
+    "/templet-1/png/group.png",
+    "/templet-1/png/sign-up.png",
+    "/templet-1/png/qr-code.png",
+    "/templet-1/png/welcome.png",
+    "/templet-1/img/indihome-poin.png",
+    "/templet-1/img/img_1.png",
+    "/templet-1/img/img_2.png",
+    "/templet-1/img/img_3.png",
+    "/templet01/img/icon.webp",
+    "/templet-1/img/icon2.webp",
+    "/templet-1/manifest.json",
+    "/templet-1/main-js/jam.js",
+    "/templet-1/main-js/main.js"
 ];
 
 // Install Service Worker
