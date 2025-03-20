@@ -1,8 +1,8 @@
 {
-    "name": "GG-Hotspot",
-    "short_name": "My Voucher",
+    "name": "My-Aplikasi",
+    "short_name": "My-Aplikasi",
     "description": "Aplikasi untuk menampilkan voucher digital.",
-    "start_url": "/tamplat-voucher/",
+    "start_url": "/templet-1/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#007bff",
