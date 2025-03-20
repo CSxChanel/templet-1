@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>qne</title>
+
+        <link rel="stylesheet" href="css/tailwind.css" />
+    </head>
+    <body class="bg-gray-400">
+        <section id="accordion" class="m-4 bg-gray-100 border-2">
+            <div
+                itemprop="mainEntity"
+                itemscope="neme"
+                itemtype="https://schema.org/FAQPage"
+            >
+                <div
+                    itemscope="faq1"
+                    itemprop="mainEntity"
+                    itemtype="https://schema.org/Question"
+                >
+                    <label
+                        itemprop="name"
+                        id="question"
+                        class="m-2 p-2 bg-blue-300 border"
+                    >
+                        Dapatkah saya download video Twitter pribadi?
+                    </label>
+                    <div
+                        class="m-2 p-2 bg-gray-400 hidden"
+                        id="answer"
+                        itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer"
+                    >
+                        <p itemprop="text">
+                            Tidak, Anda tidak bisa.<br />Twitter downloader
+                            tidak memperbolehkan pengunduhan video dan GIF dari
+                            akun atau tweet pribadi. Pastikan Anda tidak
+                            melanggar hukum dengan mengunduh video Twitter HD
+                            secara online; video tersebut mungkin dilindungi hak
+                            cipta atau mengandung informasi pribadi pemiliknya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="items-center mx-auto text-center">
+            <button
+                onclick="handelSubmit()"
+                class="bg-blue-600 m-4 rounded-lg border-2 px-2"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    style="
+                        margin: auto;
+                        background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+                        display: block;
+                        border-radius: 50%;
+                        margin-bottom: 10px;
+                    "
+                    width="60px"
+                    height="60px"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="xMidYMid"
+                >
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="32"
+                        stroke-width="8"
+                        stroke="#0057b7"
+                        stroke-dasharray="50.26548245743669 50.26548245743669"
+                        fill="none"
+                        stroke-linecap="round"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="rotate"
+                            dur="1.8518518518518516s"
+                            repeatCount="indefinite"
+                            keyTimes="0;1"
+                            values="0 50 50;360 50 50"
+                        ></animateTransform>
+                    </circle>
+                    <circle
+                        cx="50"
+                        cy="50"
+                        r="23"
+                        stroke-width="8"
+                        stroke="#ffdd00"
+                        stroke-dasharray="36.12831551628262 36.12831551628262"
+                        stroke-dashoffset="36.12831551628262"
+                        fill="none"
+                        stroke-linecap="round"
+                    >
+                        <animateTransform
+                            attributeName="transform"
+                            type="rotate"
+                            dur="1.8518518518518516s"
+                            repeatCount="indefinite"
+                            keyTimes="0;1"
+                            values="0 50 50;-360 50 50"
+                        ></animateTransform>
+                    </circle>
+                </svg>
+                Klik
+            </button>
+            <h1 class="text-2xl text-center m-4">
+                Slamat datang,
+                <span class="font-bold text-red-600" id="nama"></span>!
+            </h1>
+            <button
+                onclick="tampil()"
+                class="bg-blue-600 rounded-lg border-2 px-2 w-20"
+            >
+                tampilkan
+            </button>
+            <button
+                class="bg-blue-600 rounded-lg border-2 px-2 w-20"
+                onclick="tutup()"
+            >
+                Tutup
+            </button>
+            <p id="tampilkan" class="hidden text-2xl font-semibold">
+                ini tampil
+            </p>
+        </div>
+
+        <!-- kdkdkl -->
+        <script src="main-js/jquery.js" type="text/javascript"></script>
+        <script>
+            function tampil() {
+                $("#tampilkan").show();
+            }
+            function tutup() {
+                $("#tampilkan").hide();
+            }
+
+            function handelSubmit() {
+                let lagi = true;
+                while (lagi) {
+                    let nama = prompt("Insert Your name!");
+                    document.getElementById("nama").innerHTML = nama;
+                    if (!nama) {
+                        alert("Please insert your name");
+                    } else {
+                        alert(`Hi ${nama}`);
+                    }
+                    lagi = confirm("masukan lagi ?");
+                    if (!lagi) {
+                        alert(`Thanks`);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

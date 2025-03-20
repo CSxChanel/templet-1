@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Halaman Admin</title>
+        <script type="text/javascript" charset="utf-8">
+            function ambil() {
+                var user = new URL(window.location).searchParams.get(
+                    "username"
+                );
+                document.getElementById("nama").innerHTML = user;
+            }
+            console.log(ambil);
+        </script>
+    </head>
+    <body onload="ambil()">
+        <h1>Slamat datang, <span id="nama"></span></h1>
+    </body>
+</html>

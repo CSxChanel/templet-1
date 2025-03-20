@@ -1,0 +1,444 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title id="title"></title>
+        <link rel="stylesheet" href="css/tailwind.css" />
+        <style>
+            .box {
+                background: linear-gradient(
+                    to top,
+                    rgba(106, 17, 203, 1) 0%,
+                    rgba(37, 117, 252, 1) 100%
+                );
+                color: white;
+            }
+            .gr-red {
+                background: linear-gradient(to top right, #980000, #ff1e1e);
+            }
+            .gr-silver {
+                background: linear-gradient(to top right, #6e6e6e, #e9e9e9);
+            }
+            .gr-gold {
+                background: linear-gradient(to top right, #ce8b00, #ffde9a);
+            }
+        </style>
+    </head>
+    <body class="bg-gray-400">
+        <!-- container -->
+        <div class="bg-gray-200 rounded-lg border-2 shadow-lg m-2 p-4">
+            <div
+                class="box text-white flex justify-between items-center shadow-lg border-2 rounded-lg p-2"
+            >
+                <div class="flex space-x-2">
+                    <img
+                        class="w-12 h-12 border rounded-full"
+                        src="png/dummy-user.png"
+                        alt="users"
+                    />
+                    <div class="flex flex-col">
+                        <span class="font-bold">$(username)</span>
+                        <span class="text-xs">$(msc)</span>
+                    </div>
+                </div>
+                <form
+                    action="$(link-logout)"
+                    name="logout"
+                    onSubmit="return openLogout()"
+                >
+                    <button
+                        class="flex bg-blue-300 p-2 text-sm font-semibold rounded-lg border text-red-600"
+                        type="submit"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+                            ></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        Logout
+                    </button>
+                </form>
+            </div>
+            <div class="box rounded-lg border-2 mt-4 p-5">
+                <!-- Jam -->
+                <div class="flex justify-around items-center border-b pb-2">
+                    <div class="text-center">
+                        <h1
+                            id="jam"
+                            class="font-bold font-serif text-4xl tracking-tighter border rounded-md px-2"
+                        ></h1>
+                        <span id="tglMasehi" class="tracking-wide"></span>
+                    </div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-16 h-16 mr-1"
+                    >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <!-- Text -->
+                <h2 class="text-xl mt-4 font-bold tracking-wide">
+                    "Pergunakanlah akses internet dengan cara bijak"
+                </h2>
+                <!-- sessions -->
+                <div class="mt-4 -mb-2 flex justify-between text-xs">
+                    <div class="">
+                        <p class="flex">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 24 20"
+                                fill="none"
+                                stroke="gold"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                                ></path>
+                                <path
+                                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                ></path></svg
+                            >&nbsp; $(ip)
+                        </p>
+                        <p class="flex">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 24 20"
+                                fill="none"
+                                stroke="gold"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline
+                                    points="23 6 13.5 15.5 8.5 10.5 1 18"
+                                ></polyline>
+                                <polyline
+                                    points="17 6 23 6 23 12"
+                                ></polyline></svg
+                            >&nbsp; $(bytes-in-nice)
+                        </p>
+                        <p class="flex">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 24 20"
+                                fill="none"
+                                stroke="gold"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                ></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line
+                                    x1="12"
+                                    y1="15"
+                                    x2="12"
+                                    y2="3"
+                                ></line></svg
+                            >&nbsp; $(bytes-out-nice)
+                        </p>
+                    </div>
+                    <div class="">
+                        <p class="flex">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 26 20"
+                                fill="none"
+                                stroke="gold"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                ></path>
+                                <polyline
+                                    points="22 4 12 14.01 9 11.01"
+                                ></polyline></svg
+                            >&nbsp; $(uptime)
+                        </p>
+                        <p class="flex">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 24 22"
+                                fill="none"
+                                stroke="gold"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path
+                                    d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"
+                                ></path>
+                                <path
+                                    d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"
+                                ></path></svg
+                            >&nbsp; $(remain-bytes-total-nice)
+                        </p>
+                        <p class="flex">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 24 22"
+                                fill="none"
+                                stroke="gold"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline
+                                    points="12 6 12 12 16 14"
+                                ></polyline></svg
+                            >&nbsp; $(session-time-left)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+
+        <!-- BOX BULANAN & FOOTHER-->
+        <div
+            style="border-radius: 18px 18px 0px 0px"
+            class="bg-gray-200 border-2 mt-10"
+        >
+            <div class="w-full mx-auto text-center mt-4 mb-4 px-4">
+                <marquee class="text-medium font-bold tracking-wide text-black"
+                    >PROMO 💥 Biaya Pemasangan RUMAHAN
+                    <span class="text-2xl text-red-600">Rp 150,000.-</span>
+                </marquee>
+            </div>
+
+            <div
+                class="flex space-x-3 px-3 overflow-x-auto md:grig md:grid-cols-3 md:gap-3 md:space-x-0"
+            >
+                <div
+                    class="text-white box tracking-wide p-2 shadow-lg w-box h-box md:w-full rounded-lg"
+                >
+                    <h2
+                        class="gr-red mx-auto text-center font-bold rounded-bl-lg rounded-tr-lg"
+                    >
+                        Paling Murah
+                    </h2>
+                    <div class="flex flex-row justify-center mx-7 my-2">
+                        <div
+                            class="gr-red w-[75px] h-[75px] rounded-tl-lg rounded-br-lg p-2 text-center mr-2"
+                        >
+                            <p class="text-3xl font-bold">10</p>
+                            <p class="">Mbps</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl">Paket Bulanan</h3>
+                            <p class="text-md md:text-xl">kecepatan Normal</p>
+                        </div>
+                    </div>
+                    <div class="text-white mx-7 text-center">
+                        <h3 class="font-semibold my-2">
+                            Rp
+                            <span class="text-2xl font-bold">150,000,-</span>
+                            /bulan
+                        </h3>
+                        <button
+                            onclick="paketMurah()"
+                            type="button"
+                            class="bg-red-700 w-full rounded-lg shadow-lg font-bold py-1 text-sm"
+                        >
+                            Berlangganan Sekarang
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="box tracking-wide p-2 shadow-lg w-box h-box md:w-full rounded-lg"
+                >
+                    <h2
+                        class="gr-silver mx-auto text-center font-bold rounded-bl-lg rounded-tr-lg"
+                    >
+                        Paket Silver
+                    </h2>
+                    <div class="flex flex-row justify-center mx-7 my-2">
+                        <div
+                            class="gr-silver w-[75px] h-[75px] rounded-tl-lg rounded-br-lg p-2 text-center mr-2"
+                        >
+                            <p class="text-3xl font-bold">15</p>
+                            <p class="">Mbps</p>
+                        </div>
+                        <div class="text-white">
+                            <h3 class="font-semibold text-xl">Paket Bulanan</h3>
+                            <p class="text-md md:text-xl">kecepatan stabil</p>
+                        </div>
+                    </div>
+                    <div class="text-white mx-7 text-center">
+                        <h3 class="font-semibold my-2">
+                            Rp
+                            <span class="text-2xl font-bold">220,000,-</span>
+                            /bulan
+                        </h3>
+                        <button
+                            onclick="paketSilver()"
+                            class="bg-red-700 w-full rounded-lg shadow-lg font-bold py-1 text-sm"
+                        >
+                            Berlangganan Sekarang
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="box tracking-wide p-2 shadow-lg w-box h-box md:w-full rounded-lg"
+                >
+                    <h2
+                        class="gr-gold mx-auto text-center font-bold rounded-bl-lg rounded-tr-lg"
+                    >
+                        Paket Gold
+                    </h2>
+                    <div
+                        class="text-white flex flex-row justify-center mx-7 my-2"
+                    >
+                        <div
+                            class="gr-gold w-[75px] h-[75px] rounded-tl-lg rounded-br-lg p-2 text-center mr-2"
+                        >
+                            <p class="text-3xl font-bold">20</p>
+                            <p class="">Mbps</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-xl">Paket Bulanan</h3>
+                            <p class="text-md md:text-xl">
+                                kecepatan Super lancar
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-white mx-7 text-center">
+                        <h3 class="font-semibold my-2">
+                            Rp
+                            <span class="text-2xl font-bold">270,000,-</span>
+                            /bulan
+                        </h3>
+                        <button
+                            onclick="paketGold()"
+                            class="bg-red-700 w-full rounded-lg shadow-lg font-bold py-1 text-sm"
+                        >
+                            Berlangganan Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full mx-auto text-center my-4">
+                <button
+                    onclick="handlerButton()"
+                    class="py-2 px-5 cursor-pointer shadow-lg font-semibold border border-red-700 hover:border-red-800 rounded-full text-red-700 hover:text-red-800"
+                >
+                    Mau
+                </button>
+            </div>
+
+            <!-- footer -->
+            <footer class="mt-10 mx-2 p-4 bg-gray-400 rounded-t-lg">
+                <h1 class="font-bold tracking-wide text-md text-center">
+                    Untuk permintaan Pasang Baru ( PSB ) atau Voucher
+                    berlangganan, bisa hubungi kontak kami dibawah ini.
+                </h1>
+                <div class="flex justify-around my-4">
+                    <div class="text-center">
+                        <h1 class="font-serif tracking-wide text-sm">
+                            Butuh bantuan?<br />
+                            Hubungi kami
+                        </h1>
+                        <div class="flex">
+                            <img
+                                class="w-8 h-8"
+                                src="png/facebook.png"
+                                alt="facebook"
+                            />
+                            <img
+                                class="w-8 h-8"
+                                src="png/whatsapp.png"
+                                alt="whatsapp"
+                            />
+                            <img
+                                class="w-8 h-8"
+                                src="png/telegram.png"
+                                alt="telegram"
+                            />
+                        </div>
+                        <button
+                            class="font-bold tracking-wide text-sm"
+                            onclick="handlerButton()"
+                        >
+                            0822-1345-2856
+                        </button>
+                    </div>
+                    <div class="flex flex-col font-serif text-sm">
+                        <a href="#">Syarat dan Ketentuan</a>
+                        <a href="#">Harga Promo</a>
+                        <a href="#">Registrasi</a>
+                    </div>
+                </div>
+
+                <footer class="text-xs text-center mt-2">
+                    &copy;<span id="thn"></span>
+                    <a href="https://indihome-area.com" class="font-bold"
+                        >contoh.net |</a
+                    >
+                    All rights reserved
+                </footer>
+                <script type="text/javascript" charset="utf-8">
+                    var tahun = new Date().getFullYear();
+                    document.getElementById("thn").innerHTML = tahun;
+                </script>
+            </footer>
+        </div>
+        <!-- END BOX BULANAN & FOOTHER-->
+
+        <script
+            src="main-js/jam.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+        <script
+            src="main-js/main.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+        <script type="text/javascript">
+            document.getElementById("title").innerHTML =
+                window.location.hostname + " > status";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>Twitter Video Downloader</title>
+
+        <meta
+            name="description"
+            content="Twitter video downloader gratis kami memudahkan Anda download video Twitter langsung ke perangkat Anda, baik menggunakan ponsel atau PC. Simpan video Twitter dalam HD penuh secara gratis"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="lb-version" content="lb2" />
+
+        <link rel="manifest" href="https://ssstwitter.com/site.webmanifest" />
+
+        <link rel="stylesheet" href="css/style.min.css?v=4.0.0" />
+    </head>
+
+    <body id="sss_body" style="overflow: auto">
+        <!-- Google Tag Manager (noscript) -->
+
+        <!-- End Google Tag Manager (noscript) -->
+        <header>
+            <div class="header">
+                <div
+                    class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed"
+                >
+                    <a class="pure-menu-heading" href="#">
+                        <div class="sss" data-text="sss TWITTER">
+                            <span>S</span><span>S</span><span>S</span>
+                            <i>TWITTER</i>
+                        </div>
+                    </a>
+                    <nav>
+                        <div id="menuToggle">
+                            <input type="checkbox" id="menu_toggler" />
+                            <label for="menu_toggler"></label>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+
+                            <div
+                                id="menu"
+                                class="pure-menu pure-menu-horizontal"
+                            >
+                                <ul class="pure-menu-list u-oh">
+                                    <li class="pure-menu-item">
+                                        <a href="#" class="pure-menu-link"
+                                            >Bagaimana cara unduh?</a
+                                        >
+                                    </li>
+                                    <li class="pure-menu-item">
+                                        <a href="#" class="pure-menu-link"
+                                            >Twitter MP3</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div
+                    class="splash-container hide-in-results processed success"
+                    id="splash"
+                    hx-ext="include-vals"
+                >
+                    <div class="splash">
+                        <h1
+                            class="splash-head hide-after-request"
+                            id="bigmessage"
+                            style="display: block"
+                        >
+                            Your video is preparing...
+                        </h1>
+
+                        <div id="errorContainer" class=""></div>
+
+                        <form
+                            class="pure-form pure-g hide-after-request"
+                            data-hx-post="/us"
+                            data-hx-trigger="submit delay:1s"
+                            data-hx-target="#target"
+                            data-hx-swap="innerHTML"
+                            hx-select="#result"
+                            hx-push-url="true"
+                            include-vals="tt:'c2eb790002ce41d526f25ae9fe8ef95f',
+            ts:1739537249,source:'form'"
+                            style="display: block"
+                        >
+                            <div
+                                class="loader loader--style8 htmx-indicator"
+                                id="main_loader"
+                                style="display: block; opacity: 10"
+                            >
+                                <svg
+                                    version="1.1"
+                                    id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px"
+                                    y="0px"
+                                    width="24px"
+                                    height="30px"
+                                    viewBox="0 0 24 30"
+                                    style="enable-background: new 0 0 50 50"
+                                    xml:space="preserve"
+                                >
+                                    <rect
+                                        x="0"
+                                        y="10"
+                                        width="4"
+                                        height="10"
+                                        fill="#1e64b9"
+                                        opacity="0.2"
+                                    >
+                                        <animate
+                                            attributeName="opacity"
+                                            attributeType="XML"
+                                            values="0.2; 1; .2"
+                                            begin="0s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                        <animate
+                                            attributeName="height"
+                                            attributeType="XML"
+                                            values="10; 20; 10"
+                                            begin="0s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                        <animate
+                                            attributeName="y"
+                                            attributeType="XML"
+                                            values="10; 5; 10"
+                                            begin="0s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                    </rect>
+                                    <rect
+                                        x="8"
+                                        y="10"
+                                        width="4"
+                                        height="10"
+                                        fill="#1e64b9"
+                                        opacity="0.2"
+                                    >
+                                        <animate
+                                            attributeName="opacity"
+                                            attributeType="XML"
+                                            values="0.2; 1; .2"
+                                            begin="0.15s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                        <animate
+                                            attributeName="height"
+                                            attributeType="XML"
+                                            values="10; 20; 10"
+                                            begin="0.15s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                        <animate
+                                            attributeName="y"
+                                            attributeType="XML"
+                                            values="10; 5; 10"
+                                            begin="0.15s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                    </rect>
+                                    <rect
+                                        x="16"
+                                        y="10"
+                                        width="4"
+                                        height="10"
+                                        fill="#1e64b9"
+                                        opacity="0.2"
+                                    >
+                                        <animate
+                                            attributeName="opacity"
+                                            attributeType="XML"
+                                            values="0.2; 1; .2"
+                                            begin="0.3s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                        <animate
+                                            attributeName="height"
+                                            attributeType="XML"
+                                            values="10; 20; 10"
+                                            begin="0.3s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                        <animate
+                                            attributeName="y"
+                                            attributeType="XML"
+                                            values="10; 5; 10"
+                                            begin="0.3s"
+                                            dur="0.6s"
+                                            repeatCount="indefinite"
+                                        ></animate>
+                                    </rect>
+                                </svg>
+                            </div>
+                            <div class="pure-u-1 pure-u-sm-18-24">
+                                <div class="input-link-wrapper">
+                                    <input
+                                        id="main_page_text"
+                                        title="https://twitter.com/Eminem/status/943590594491772928"
+                                        name="id"
+                                        type="text"
+                                        class="form-control input-lg"
+                                        placeholder="Insert link"
+                                        autofocus=""
+                                        value=""
+                                    />
+                                    <button
+                                        type="button"
+                                        id="paste"
+                                        style="display: block"
+                                    >
+                                        <svg
+                                            data-v-611f7da7=""
+                                            width="14"
+                                            height="18"
+                                            viewBox="0 0 14 18"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                data-v-611f7da7=""
+                                                d="M4.75 2.9625C4.75 2.505 4.90804 2.06624 5.18934 1.74274C5.47064 1.41924 5.85218 1.2375 6.25 1.2375H7.75C8.14782 1.2375 8.52936 1.41924 8.81066 1.74274C9.09196 2.06624 9.25 2.505 9.25 2.9625M4.75 2.9625H3.25C2.85218 2.9625 2.47064 3.14424 2.18934 3.46774C1.90804 3.79124 1.75 4.23 1.75 4.6875V15.0375C1.75 15.495 1.90804 15.9338 2.18934 16.2573C2.47064 16.5808 2.85218 16.7625 3.25 16.7625H10.75C11.1478 16.7625 11.5294 16.5808 11.8107 16.2573C12.092 15.9338 12.25 15.495 12.25 15.0375V4.6875C12.25 4.23 12.092 3.79124 11.8107 3.46774C11.5294 3.14424 11.1478 2.9625 10.75 2.9625H9.25H4.75ZM4.75 2.9625C4.75 3.41999 4.90804 3.85875 5.18934 4.18225C5.47064 4.50576 5.85218 4.6875 6.25 4.6875H7.75C8.14782 4.6875 8.52936 4.50576 8.81066 4.18225C9.09196 3.85875 9.25 3.41999 9.25 2.9625H4.75Z"
+                                                stroke="#383838"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></path>
+                                        </svg>
+                                        <span> Paste </span>
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        id="clear"
+                                        style="display: block"
+                                    >
+                                        <svg
+                                            data-v-611f7da7=""
+                                            width="14px"
+                                            height="14px"
+                                            viewBox="0 0 320 512"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                data-v-611f7da7=""
+                                                d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"
+                                                fill="#4a4a4a"
+                                            ></path>
+                                        </svg>
+                                        <span> Clear </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="pure-u-1 pure-u-sm-6-24">
+                                <button
+                                    type="submit"
+                                    id="submit"
+                                    class="pure-button pure-button-primary u-fw"
+                                    style="background-color: rgb(241, 218, 92)"
+                                >
+                                    <span style="display: block">Unduh</span>
+                                    <span style="display: block"
+                                        >Please wait...</span
+                                    >
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="adcontainer_big">
+                            <!-- GOOGLEAD:START -->
+                            <ins
+                                class="adsbygoogle"
+                                id="adMain"
+                                style="display: block; height: 280px"
+                                data-ad-client="ca-pub-9873762851395779"
+                                data-ad-slot="1638630287"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true"
+                            ></ins>
+
+                            <!-- GOOGLEAD:END -->
+                        </div>
+                        <div id="target" class="">
+                            <div id="result">
+                                <div class="content-wrapper">
+                                    <div
+                                        class="result u-shadow--black"
+                                        id="mainpicture"
+                                    >
+                                        <div class="result_overlay">
+                                            <h2>Download video</h2>
+                                            <a
+                                                href="https://ssscdn.io/ssstwitter/1890404808810492294/KRGqWRrbcggokBlV"
+                                                class="pure-button pure-button-primary is-center u-bl dl-button download_link without_watermark vignette_active"
+                                                >Download 640x360</a
+                                            >
+                                            <a
+                                                href="https://ssscdn.io/ssstwitter/1890404808810492294/L_oibA-DNnH1Jg72"
+                                                class="pure-button pure-button-primary is-center u-bl dl-button download_link without_watermark vignette_active"
+                                                >Download HD 1280x720</a
+                                            >
+                                            <a
+                                                href="https://play.google.com/store/apps/details?id=com.video.videodownloader_appdl"
+                                                class="pure-button pure-button-primary is-center u-bl dl_android_app"
+                                                ><img
+                                                    src="https://ssstwitter.com/images/android_logo_core.svg"
+                                                    width="20"
+                                                    height="20"
+                                                    style="
+                                                        vertical-align: bottom;
+                                                    "
+                                                />
+                                                <b>Download with app</b></a
+                                            >
+
+                                            <a
+                                                href="https://ssscdn.io/ssstwitter/1890404808810492294/0UkZxUsfwAnchnfD"
+                                                class="pure-button pure-button-primary is-center u-bl dl-button download_link without_watermark vignette_active"
+                                                >Download 480x270</a
+                                            >
+                                            <a
+                                                hx-trigger="click"
+                                                hx-indicator=".htmx-indicator0"
+                                                hx-post="https://r.ssstik.top/b/mp3.sh"
+                                                hx-include="[name=url0]"
+                                                class="pure-button pure-button-primary is-center u-bl dl-button download_link mp3_convert"
+                                                id="mp3_convert"
+                                                >Convert to MP3</a
+                                            >
+
+                                            <div class="">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    style="
+                                                        margin: auto;
+                                                        background: rgba(
+                                                                0,
+                                                                0,
+                                                                0,
+                                                                0
+                                                            )
+                                                            none repeat scroll
+                                                            0% 0%;
+                                                        display: block;
+                                                        border-radius: 50%;
+                                                        margin-bottom: 10px;
+                                                    "
+                                                    width="60px"
+                                                    height="60px"
+                                                    viewBox="0 0 100 100"
+                                                    preserveAspectRatio="xMidYMid"
+                                                >
+                                                    <circle
+                                                        cx="50"
+                                                        cy="50"
+                                                        r="32"
+                                                        stroke-width="8"
+                                                        stroke="#0057b7"
+                                                        stroke-dasharray="50.26548245743669 50.26548245743669"
+                                                        fill="none"
+                                                        stroke-linecap="round"
+                                                    >
+                                                        <animateTransform
+                                                            attributeName="transform"
+                                                            type="rotate"
+                                                            dur="1.8518518518518516s"
+                                                            repeatCount="indefinite"
+                                                            keyTimes="0;1"
+                                                            values="0 50 50;360 50 50"
+                                                        ></animateTransform>
+                                                    </circle>
+                                                    <circle
+                                                        cx="50"
+                                                        cy="50"
+                                                        r="23"
+                                                        stroke-width="8"
+                                                        stroke="#ffdd00"
+                                                        stroke-dasharray="36.12831551628262 36.12831551628262"
+                                                        stroke-dashoffset="36.12831551628262"
+                                                        fill="none"
+                                                        stroke-linecap="round"
+                                                    >
+                                                        <animateTransform
+                                                            attributeName="transform"
+                                                            type="rotate"
+                                                            dur="1.8518518518518516s"
+                                                            repeatCount="indefinite"
+                                                            keyTimes="0;1"
+                                                            values="0 50 50;-360 50 50"
+                                                        ></animateTransform>
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                    </div>
+                </div>
+            </section>
+
+            <section class="hide-after-request" style="display: block">
+                <div class="content-wrapper">
+                    <h3 class="is-center">Pertanyaan Umum</h3>
+                    <section id="accordion">
+                        <div
+                            class="pure-g l-box faqs"
+                            itemprop="mainEntity"
+                            itemscope="neme"
+                            itemtype="https://schema.org/FAQPage"
+                        >
+                            <div
+                                class="pure-u-1"
+                                itemscope="faq1"
+                                itemprop="mainEntity"
+                                itemtype="https://schema.org/Question"
+                            >
+                                <label itemprop="name" for="" class="faq-label">
+                                    Dapatkah saya download video Twitter
+                                    pribadi?
+                                </label>
+                                <div
+                                    class="faq-answer"
+                                    itemscope="faq1"
+                                    itemprop="acceptedAnswer"
+                                    itemtype="https://schema.org/Answer"
+                                >
+                                    <p itemprop="text">
+                                        Tidak, Anda tidak bisa.<br />Twitter
+                                        downloader tidak memperbolehkan
+                                        pengunduhan video dan GIF dari akun atau
+                                        tweet pribadi. Pastikan Anda tidak
+                                        melanggar hukum dengan mengunduh video
+                                        Twitter HD secara online; video tersebut
+                                        mungkin dilindungi hak cipta atau
+                                        mengandung informasi pribadi pemiliknya.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="pure-u-1"
+                                itemscope="faq2"
+                                itemprop="mainEntity"
+                                itemtype="https://schema.org/Question"
+                            >
+                                <label
+                                    itemprop="name"
+                                    for="faq2"
+                                    class="faq-label"
+                                >
+                                    Cara download video dari Twitter di iPhone?
+                                </label>
+                                <div
+                                    class="faq-answer"
+                                    itemscope="faq2"
+                                    itemprop="acceptedAnswer"
+                                    itemtype="https://schema.org/Answer"
+                                >
+                                    <p itemprop="text">
+                                        Untuk download Twitter mp4 di iPhone
+                                        gratis, gunakan situs web twitter video
+                                        downloader. Pada iOS 13 ke atas, video
+                                        hanya bisa disimpan dari sumber online
+                                        melalui browser Safari. Untuk iOS 12 ke
+                                        bawah, gunakan aplikasi 'Documents by
+                                        Readdle Inc.' dari Apple App Store
+                                        bersama browser bawaan dan situs kami.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="pure-u-1"
+                                itemscope="faq3"
+                                itemprop="mainEntity"
+                                itemtype="https://schema.org/Question"
+                            >
+                                <label
+                                    itemprop="name"
+                                    for="faq3"
+                                    class="faq-label"
+                                >
+                                    Apakah sss Twitter downloader memiliki
+                                    batasan untuk mengunduh?
+                                </label>
+                                <div
+                                    class="faq-answer"
+                                    itemscope="faq3"
+                                    itemprop="acceptedAnswer"
+                                    itemtype="https://schema.org/Answer"
+                                >
+                                    <p itemprop="text">
+                                        Tidak! Anda dapat download video Twitter
+                                        mp4 atau download foto Twitter tanpa
+                                        aplikasi sebanyak yang Anda inginkan,
+                                        satu-satunya batasan adalah waktu tunggu
+                                        antara menekan tombol unduh. Ada jeda
+                                        sepuluh detik antara meminta tautan
+                                        lain. Penundaan ini wajib untuk
+                                        mengurangi pemuatan server dan untuk
+                                        memastikan kecepatan pengunduhan terbaik
+                                        dari twitter video downloader kami.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="pure-u-1"
+                                itemscope="faq4"
+                                itemprop="mainEntity"
+                                itemtype="https://schema.org/Question"
+                            >
+                                <label
+                                    itemprop="name"
+                                    for="faq4"
+                                    class="faq-label"
+                                >
+                                    Bagaimana cara download video Twitter hd di
+                                    Android?
+                                </label>
+                                <div
+                                    class="faq-answer"
+                                    itemscope="faq4"
+                                    itemprop="acceptedAnswer"
+                                    itemtype="https://schema.org/Answer"
+                                >
+                                    <p itemprop="text">
+                                        Di Android Anda harus mengikuti panduan
+                                        tiga langkah untuk unduh video Twitter.
+                                        Buka aplikasi Twitter atau browser
+                                        Chrome atau lainnya apa pun dan buka
+                                        halaman web Twitter (X.com). Temukan dan
+                                        salin URL tweet video dan kunjungi
+                                        download video Twitter hd 1080p site.
+                                        Tempel tautan ke formulir di halaman dan
+                                        ketuk tombol "Download Twitter video".
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="pure-u-1"
+                                itemscope="faq5"
+                                itemprop="mainEntity"
+                                itemtype="https://schema.org/Question"
+                            >
+                                <label
+                                    itemprop="name"
+                                    for="faq5"
+                                    class="faq-label"
+                                >
+                                    Bagaimana cara menggunakan Twitter video
+                                    download
+                                </label>
+                                <div
+                                    class="faq-answer"
+                                    itemscope="faq5"
+                                    itemprop="acceptedAnswer"
+                                    itemtype="https://schema.org/Answer"
+                                >
+                                    <p itemprop="text">
+                                        Twitter downloader memungkinkan Anda
+                                        download Twitter video mp4 atau unduh
+                                        foto dari twitter di perangkat apa pun.
+                                        Cukup tambahkan ekstensi ke browser Anda
+                                        dan save from Twitter video Anda, atau
+                                        awalan "sss" sebelum URL. Anda juga
+                                        dapat mengunjungi twitter video
+                                        downloader dan menempelkan URL ke bidang
+                                        khusus untuk memulai pengunduhan.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <div class="modal micromodal-slide" id="ad-vignette" aria-hidden="true">
+            <div
+                class="modal__overlay"
+                id="ovr"
+                tabindex="-1"
+                data-micromodal-close=""
+            >
+                <div
+                    class="modal__container"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="ad-vignette-title"
+                >
+                    <header class="modal__header"></header>
+                    <main
+                        class="modal__content"
+                        id="ad-vignette-content"
+                    ></main>
+                    <footer class="modal__footer">
+                        <button
+                            class="modal__btn"
+                            data-micromodal-close=""
+                            aria-label="Close this dialog window"
+                        >
+                            Close
+                        </button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+
+        <footer id="footer" style="padding-bottom: 5em">
+            <div class="footer l-box is-center">
+                <div class="pure-menu pure-menu-horizontal">
+                    <nav>
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item pure-menu-selected">
+                                © 2018-2025 -
+                                <a
+                                    class="pure-menu-link--white"
+                                    href="https://ssstwitter.com/id"
+                                    >Twitter Downloader</a
+                                >
+                            </li>
+                            <li class="pure-menu-item">
+                                <a
+                                    href="https://ssstwitter.com/id/privacy"
+                                    target="_self"
+                                    class="pure-menu-link"
+                                    >Rahasia pribadi</a
+                                >
+                            </li>
+                            <li class="pure-menu-item">
+                                <a
+                                    href="https://ssstwitter.com/id/how-to-download-twitter-video"
+                                    target="_self"
+                                    class="pure-menu-link"
+                                    >Bagaimana cara unduh?</a
+                                >
+                            </li>
+                            <li class="pure-menu-item">
+                                <a
+                                    href="https://ssstwitter.com/id/about"
+                                    target="_self"
+                                    class="pure-menu-link"
+                                    >Tentang</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item">
+                            <a
+                                href="https://likeedownloader.com/"
+                                rel="noopener"
+                                target="_blank"
+                                class="pure-menu-link"
+                                >Likee Downloader</a
+                            >
+                        </li>
+                        <li class="pure-menu-item">
+                            <a
+                                href="https://ssstik.io/id"
+                                rel="noopener"
+                                target="_blank"
+                                class="pure-menu-link"
+                                >TikTok Video Downloader</a
+                            >
+                        </li>
+                    </ul>
+
+                    <ul id="language-switcher">
+                        <li
+                            class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"
+                        >
+                            <a id="menuLink1" class="pure-menu-link">
+                                Bahasa&nbsp;Indonesia‬
+                            </a>
+                            <ul class="pure-menu-children u-smaller-text">
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/"
+                                        lang="en"
+                                        class="pure-menu-link"
+                                        >🇺🇸&nbsp;English</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/de"
+                                        lang="de"
+                                        class="pure-menu-link"
+                                        >🇩🇪&nbsp;Deutsh</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/es"
+                                        lang="es"
+                                        class="pure-menu-link"
+                                        >🇪🇸&nbsp;Español</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/fr"
+                                        lang="fr"
+                                        class="pure-menu-link"
+                                        >🇫🇷&nbsp;Français</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/pt"
+                                        lang="pt"
+                                        class="pure-menu-link"
+                                        >🇵🇹&nbsp;Português&nbsp;(Brasil)</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/ru"
+                                        lang="ru"
+                                        class="pure-menu-link"
+                                        >🇷🇺&nbsp;Русский</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/tr"
+                                        lang="tr"
+                                        class="pure-menu-link"
+                                        >🇹🇷&nbsp;Türkçe‬‬</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/it"
+                                        lang="it"
+                                        class="pure-menu-link"
+                                        >🇮🇹&nbsp;‪Italiano‬</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/uk"
+                                        lang="uk"
+                                        class="pure-menu-link"
+                                        >🇺🇦&nbsp;‪Українська‬</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/ar"
+                                        lang="ar"
+                                        class="pure-menu-link"
+                                        >🇦🇪&nbsp;العربية</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/vi"
+                                        lang="vi"
+                                        class="pure-menu-link"
+                                        >🇻🇳&nbsp;Tiếng&nbsp;Việt</a
+                                    >
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a
+                                        href="https://ssstwitter.com/th"
+                                        lang="th"
+                                        class="pure-menu-link"
+                                        >🇹🇭&nbsp;ไทย</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- GOOGLEAD_MINI:START -->
+            <div id="adBottom">
+                <div class="ad_sticky">
+                    <ins
+                        class="adsbygoogle"
+                        style="display: inline-block; height: 90px; width: 100%"
+                        data-ad-client="ca-pub-9873762851395779"
+                        data-ad-slot="4686284698"
+                        data-full-width-responsive="true"
+                    ></ins>
+                    <div class="ad-close">
+                        <svg
+                            width="22px"
+                            height="22px"
+                            viewBox="0 0 16 16"
+                            class="bi bi-x"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- GOOGLEAD_MINI:END -->
+        </footer>
+    </body>
+</html>

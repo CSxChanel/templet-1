@@ -1,0 +1,857 @@
+<!doctype html>
+<html>
+    <head>
+        <title id="title"></title>
+        <meta
+            http-equiv="Content-Type"
+            content="text/html; charset=iso-8859-1"
+        />
+        <meta name="theme-color" content="#3B5998" />
+        <meta
+            name="viewport"
+            content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"
+        />
+        <link rel="stylesheet" href="css/tailwind.css" />
+        <style>
+            body {
+                background: radial-gradient(
+                    circle,
+                    rgba(37, 117, 252, 1) 0%,
+                    rgba(106, 17, 203, 1) 100%
+                );
+                color: white;
+            }
+        </style>
+    </head>
+    <body id="white-mode">
+        <!-- HEADER -->
+        <div class="menubar px-5 py-2 text-white">
+            <!-- Logo -->
+            <div class="flex justify-between mt-2">
+                <div class="flex justify-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-6 w-6 mr-2"
+                    >
+                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                    </svg>
+                    <span id="isName" class="font-bold"></span>
+                </div>
+                <button
+                    type="button"
+                    class="relative inline-block mr-2 animate-pulse"
+                    onclick="showNotif()"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-bell"
+                    >
+                        <path
+                            d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                        ></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <div
+                        class="absolute top-1 right-1 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full w-4 h-4"
+                    >
+                        1
+                    </div>
+                </button>
+            </div>
+            <!-- End Logo -->
+            <!-- Jam -->
+            <div class="flex justify-between items-center py-2">
+                <div class="flex justify-start items-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-6 h-6 mr-1"
+                    >
+                        <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            ry="2"
+                        ></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <div class="flex flex-col divide-y">
+                        <div
+                            id="tglMasehi"
+                            class="font-bold text-sm tracking-wide"
+                        ></div>
+                        <div
+                            id="tglHijriyah"
+                            class="font-bold text-sm tracking-wide"
+                        ></div>
+                    </div>
+                </div>
+
+                <div class="flex justify-start items-center">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-3 h-3 mr-1"
+                    >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+
+                    <div id="jam" class="font-bold text-sm tracking-wide"></div>
+                </div>
+            </div>
+            <!-- End Jam -->
+        </div>
+        <!-- END HEADER -->
+
+        <!-- INFO USER -->
+        <div
+            class="border-4 mx-4 rounded-lg my-32 items-center text-center p-4 shadow-xl"
+        >
+            <div class="flex flex-col justify-items-center items-center">
+                $( if login-by == 'mac')
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="54"
+                    height="54"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-user-x"
+                >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="18" y1="8" x2="23" y2="13"></line>
+                    <line x1="23" y1="8" x2="18" y2="13"></line>
+                </svg>
+                <h3 id="user">$(username)</h3>
+                <br />
+                <h1>
+                    Anda telah keluar dari jaringan <br /><b id="isLink"></b>
+                </h1>
+                <br /><br />
+                $(endif)
+            </div>
+            <table class="flex flex-col mx-auto w-full items-center">
+                <tbody>
+                    <tr class="text-left">
+                        <td class="p-2 border border-slate-600">IP Address</td>
+                        <td class="p-2 border border-slate-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 20"
+                                fill="none"
+                                stroke="grey"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                                ></path>
+                                <path
+                                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                ></path>
+                            </svg>
+                        </td>
+                        <td class="p-2 border border-slate-600">$(ip)</td>
+                    </tr>
+                    <tr class="text-left">
+                        <td class="p-2 border border-slate-600">MAX Address</td>
+                        <td class="p-2 border border-slate-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 21"
+                                fill="none"
+                                stroke="grey"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                        </td>
+                        <td class="p-2 border border-slate-600">$(max)</td>
+                    </tr>
+                    <tr class="text-left">
+                        <td class="p-2 border border-slate-600">Upload</td>
+                        <td class="p-2 border border-slate-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 20"
+                                fill="none"
+                                stroke="grey"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline
+                                    points="23 6 13.5 15.5 8.5 10.5 1 18"
+                                ></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </td>
+                        <td class="p-2 border border-slate-600">
+                            $(bytes-in-nice)
+                        </td>
+                    </tr>
+                    <tr class="text-left">
+                        <td class="p-2 border border-slate-600">Download</td>
+                        <td class="p-2 border border-slate-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 20"
+                                fill="none"
+                                stroke="grey"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                ></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </td>
+                        <td class="p-2 border border-slate-600">
+                            $(bytes-out-nice)
+                        </td>
+                    </tr>
+                    <tr class="text-left">
+                        <td class="p-2 border border-slate-600">Terkoneksi</td>
+                        <td class="p-2 border border-slate-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 26 20"
+                                fill="none"
+                                stroke="grey"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                ></path>
+                                <polyline
+                                    points="22 4 12 14.01 9 11.01"
+                                ></polyline>
+                            </svg>
+                        </td>
+                        <td class="p-2 border border-slate-600">$(uptime)</td>
+                    </tr>
+                    $(if remain-bytes-total)
+                    <tr class="text-left">
+                        <td class="p-2 border border-slate-600">Sisa Quota</td>
+                        <td class="p-2 border border-slate-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 22"
+                                fill="none"
+                                stroke="grey"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path
+                                    d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"
+                                ></path>
+                                <path
+                                    d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"
+                                ></path>
+                            </svg>
+                        </td>
+                        <td class="p-2 border border-slate-600">
+                            $(remain-bytes-total-nice)
+                        </td>
+                    </tr>
+                    $(endif) $(if session-time-left)
+                    <tr class="text-left">
+                        <td class="p-2 border border-slate-600">Sisa Waktu</td>
+                        <td class="p-2 border border-slate-600">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 22"
+                                fill="none"
+                                stroke="grey"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </td>
+                        <td class="p-2 border border-slate-600">
+                            $(session-time-left)
+                        </td>
+                    </tr>
+                    $(endif) $(if blocked == 'yes') $(endif) $(if login-by-mac
+                    != 'yes')
+                </tbody>
+            </table>
+            <!-- $(link-login) -->
+            <form
+                action="$(link-login)"
+                name="login"
+                onSubmit="return openLogin()"
+            >
+                <button
+                    class="flex flex-col mx-auto items-center border-2 rounded-lg px-4 my-10 animate-bounce bg-green-600"
+                    type="submit"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-wifi"
+                    >
+                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                        <line x1="12" y1="20" x2="12.01" y2="20"></line></svg
+                    >Login Kembali
+                </button>
+            </form>
+        </div>
+        <!-- END INFO USER -->
+
+        <!-- Notification -->
+        <div
+            id="notification"
+            class="fixed z-20 inset-0 flex items-center justify-center left-0 transition-opacity duration-300 hidden"
+        >
+            <div
+                class="fixed top-20 right-0 h-full w-full backdrop-blur transition-opacity duration-300"
+            ></div>
+            <div
+                style="color: rgba(106, 17, 203, 1)"
+                class="z-20 bg-gray-100 m-4 border-2 border-rose-500 rounded-lg overflow-hidden w-full md:max-w-sm"
+            >
+                <div
+                    class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-0 h-10 w-10 mt-3"
+                >
+                    <svg
+                        class="h-6 w-6 text-green-600"
+                        stroke="currentColor"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                        />
+                    </svg>
+                </div>
+                <div class="mt-3 mt-0 ml-4 text-left">
+                    <h3
+                        id="user"
+                        class="text-lg font-medium text-gray-900 text-center"
+                    >
+                        $(username)
+                    </h3>
+                    <p class="text-center font-medium">Anda telah keluar</p>
+                </div>
+                <table class="flex flex-col mx-auto items-center">
+                    <tbody>
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">
+                                IP Address
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 20"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                                    ></path>
+                                    <path
+                                        d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                    ></path>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">$(ip)</td>
+                        </tr>
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">
+                                MAX Address
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 21"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line
+                                        x1="12"
+                                        y1="16"
+                                        x2="12"
+                                        y2="12"
+                                    ></line>
+                                    <line
+                                        x1="12"
+                                        y1="8"
+                                        x2="12.01"
+                                        y2="8"
+                                    ></line>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">$(max)</td>
+                        </tr>
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">Upload</td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 20"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <polyline
+                                        points="23 6 13.5 15.5 8.5 10.5 1 18"
+                                    ></polyline>
+                                    <polyline
+                                        points="17 6 23 6 23 12"
+                                    ></polyline>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                $(bytes-in-nice)
+                            </td>
+                        </tr>
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">
+                                Download
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 20"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                    ></path>
+                                    <polyline
+                                        points="7 10 12 15 17 10"
+                                    ></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                $(bytes-out-nice)
+                            </td>
+                        </tr>
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">
+                                Terkoneksi
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 26 20"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                    ></path>
+                                    <polyline
+                                        points="22 4 12 14.01 9 11.01"
+                                    ></polyline>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                $(uptime)
+                            </td>
+                        </tr>
+                        $(if remain-bytes-total)
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">
+                                Sisa Quota
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 22"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <ellipse
+                                        cx="12"
+                                        cy="5"
+                                        rx="9"
+                                        ry="3"
+                                    ></ellipse>
+                                    <path
+                                        d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"
+                                    ></path>
+                                    <path
+                                        d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"
+                                    ></path>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                $(remain-bytes-total-nice)
+                            </td>
+                        </tr>
+                        $(endif) $(if session-time-left)
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">
+                                Sisa Waktu
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 22"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline
+                                        points="12 6 12 12 16 14"
+                                    ></polyline>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                $(session-time-left)
+                            </td>
+                        </tr>
+                        $(endif) $(if blocked == 'yes')
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">Status</td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 20"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M5 12.55a11 11 0 0 1 14.08 0"
+                                    ></path>
+                                    <path
+                                        d="M1.42 9a16 16 0 0 1 21.16 0"
+                                    ></path>
+                                    <path
+                                        d="M8.53 16.11a6 6 0 0 1 6.95 0"
+                                    ></path>
+                                    <line
+                                        x1="12"
+                                        y1="20"
+                                        x2="12.01"
+                                        y2="20"
+                                    ></line>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                <div style="color: #ff8080">
+                                    <a
+                                        href="$(link-advert)"
+                                        target="hotspot_advert"
+                                        >advertisement</a
+                                    >
+                                    required
+                                </div>
+                            </td>
+                        </tr>
+                        $(elif refresh-timeout)
+                        <tr class="text-left">
+                            <td class="p-2 border border-slate-600">Refresh</td>
+                            <td class="p-2 border border-slate-600">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 19"
+                                    fill="none"
+                                    stroke="grey"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <polyline
+                                        points="23 4 23 10 17 10"
+                                    ></polyline>
+                                    <polyline
+                                        points="1 20 1 14 7 14"
+                                    ></polyline>
+                                    <path
+                                        d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+                                    ></path>
+                                </svg>
+                            </td>
+                            <td class="p-2 border border-slate-600">
+                                $(refresh-timeout)
+                            </td>
+                        </tr>
+                        $(endif) $(if login-by-mac != 'yes')
+                    </tbody>
+                </table>
+                <div
+                    class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+                >
+                    <span
+                        class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
+                    >
+                        <button
+                            onclick="showNotif()"
+                            type="button"
+                            class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5"
+                        >
+                            Tutup
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- End Notification -->
+
+        <!-- Sosial media -->
+        <div class="mt-10 mx-2 py-2 mb-40 border">
+            <h1 class="font-bold tracking-wide text-md text-center">
+                Untuk permintaan Pasang Baru ( PSB ) atau Voucher berlangganan,
+                bisa hubungi kontak kami dibawah ini.
+            </h1>
+            <div class="flex justify-around my-4">
+                <div class="text-center">
+                    <h1 class="font-serif tracking-wide text-sm">
+                        Butuh bantuan?<br />
+                        Hubungi kami
+                    </h1>
+                    <div class="flex">
+                        <img
+                            class="w-8 h-8"
+                            src="png/facebook.png"
+                            alt="facebook"
+                        />
+                        <img
+                            class="w-8 h-8"
+                            src="png/whatsapp.png"
+                            alt="whatsapp"
+                        />
+                        <img
+                            class="w-8 h-8"
+                            src="png/telegram.png"
+                            alt="telegram"
+                        />
+                    </div>
+                    <a class="font-bold tracking-wide text-sm" href="#"
+                        >0822-1345-2856</a
+                    >
+                </div>
+                <div class="flex flex-col font-serif text-sm">
+                    <a href="#">Syarat dan Ketentuan</a>
+                    <a href="#">Harga Promo</a>
+                    <a href="#">Registrasi</a>
+                </div>
+            </div>
+
+            <footer class="text-xs text-center mt-2">
+                &copy;<span id="thn"></span>
+                <a href="https://indihome-area.com" class="font-bold"
+                    >contoh.net |</a
+                >
+                All rights reserved
+            </footer>
+            <script type="text/javascript" charset="utf-8">
+                var tahun = new Date().getFullYear();
+                document.getElementById("thn").innerHTML = tahun;
+            </script>
+        </div>
+        <!-- End Sosial media -->
+
+        <!-- MENU BAWAH-->
+        <section
+            class="fother fixed bottom-0 w-full mt-16 text-center text-white z-20 md:hidden"
+        >
+            <div class="grid grid-cols-3 divide-x-2 divide-gray-300 gap-2 p-2">
+                <div class="flex flex-col">
+                    <div>
+                        <form
+                            action="$(link-login)"
+                            name="login"
+                            onSubmit="return openLogin()"
+                        >
+                            <button type="submit">
+                                <div class="h-10 w-10">
+                                    <img src="png/group.png" alt="" />
+                                </div>
+
+                                <p
+                                    class="text-xs -leading-1 font-medium text-center tracking-tight text-white"
+                                >
+                                    Login <br />
+                                    member
+                                </p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="spinner mx-auto rounded-full w-16 h-16">
+                        <button
+                            onclick="whiteMode()"
+                            class="rounded-full w-16 h-16"
+                        ></button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div>
+                        <form
+                            action="$(link-login)"
+                            name="login"
+                            onsubmit="return openLogin()"
+                        >
+                            <button type="submit">
+                                <div class="h-10 w-10">
+                                    <img src="png/unlocked.png" alt="" />
+                                </div>
+
+                                <p
+                                    class="text-xs -leading-1 font-medium text-center tracking-tight text-white"
+                                >
+                                    Login <br />
+                                    voucher
+                                </p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- AHIR MENU BAWAH-->
+
+        <script type="text/javascript">
+            document.getElementById("title").innerHTML =
+                window.location.hostname + " > logout";
+            document.getElementById("isName").innerHTML =
+                window.location.hostname;
+            document.getElementById("isLink").innerHTML =
+                window.location.hostname;
+        </script>
+        <script
+            src="main-js/jam.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+        <script
+            src="main-js/main.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+    </body>
+</html>
