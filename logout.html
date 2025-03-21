@@ -146,7 +146,7 @@
             class="border-4 mx-4 rounded-lg my-32 items-center text-center p-4 shadow-xl"
         >
             <div class="flex flex-col justify-items-center items-center">
-                $( if login-by == 'mac')
+               
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="54"
@@ -164,13 +164,13 @@
                     <line x1="18" y1="8" x2="23" y2="13"></line>
                     <line x1="23" y1="8" x2="18" y2="13"></line>
                 </svg>
-                <h3 id="user">$(username)</h3>
+                <h3 id="user" class="font-extrabold text-2xl text-red-600"></h3>
                 <br />
                 <h1>
                     Anda telah keluar dari jaringan <br /><b id="isLink"></b>
                 </h1>
                 <br /><br />
-                $(endif)
+                
             </div>
             <table class="flex flex-col mx-auto w-full items-center">
                 <tbody>
@@ -292,7 +292,7 @@
                         </td>
                         <td class="p-2 border border-slate-600">$(uptime)</td>
                     </tr>
-                    $(if remain-bytes-total)
+                
                     <tr class="text-left">
                         <td class="p-2 border border-slate-600">Sisa Quota</td>
                         <td class="p-2 border border-slate-600">
@@ -320,7 +320,7 @@
                             $(remain-bytes-total-nice)
                         </td>
                     </tr>
-                    $(endif) $(if session-time-left)
+                  
                     <tr class="text-left">
                         <td class="p-2 border border-slate-600">Sisa Waktu</td>
                         <td class="p-2 border border-slate-600">
@@ -343,13 +343,12 @@
                             $(session-time-left)
                         </td>
                     </tr>
-                    $(endif) $(if blocked == 'yes') $(endif) $(if login-by-mac
-                    != 'yes')
+                    
                 </tbody>
             </table>
             <!-- $(link-login) -->
             <form
-                action="$(link-login)"
+                action="index.html"
                 name="login"
                 onSubmit="return openLogin()"
             >
@@ -413,7 +412,7 @@
                         id="user"
                         class="text-lg font-medium text-gray-900 text-center"
                     >
-                        $(username)
+                        
                     </h3>
                     <p class="text-center font-medium">Anda telah keluar</p>
                 </div>
@@ -561,7 +560,7 @@
                                 $(uptime)
                             </td>
                         </tr>
-                        $(if remain-bytes-total)
+                        
                         <tr class="text-left">
                             <td class="p-2 border border-slate-600">
                                 Sisa Quota
@@ -596,7 +595,7 @@
                                 $(remain-bytes-total-nice)
                             </td>
                         </tr>
-                        $(endif) $(if session-time-left)
+                        
                         <tr class="text-left">
                             <td class="p-2 border border-slate-600">
                                 Sisa Waktu
@@ -623,7 +622,7 @@
                                 $(session-time-left)
                             </td>
                         </tr>
-                        $(endif) $(if blocked == 'yes')
+                      
                         <tr class="text-left">
                             <td class="p-2 border border-slate-600">Status</td>
                             <td class="p-2 border border-slate-600">
@@ -666,7 +665,7 @@
                                 </div>
                             </td>
                         </tr>
-                        $(elif refresh-timeout)
+                       
                         <tr class="text-left">
                             <td class="p-2 border border-slate-600">Refresh</td>
                             <td class="p-2 border border-slate-600">
@@ -693,10 +692,10 @@
                                 </svg>
                             </td>
                             <td class="p-2 border border-slate-600">
-                                $(refresh-timeout)
+                             
                             </td>
                         </tr>
-                        $(endif) $(if login-by-mac != 'yes')
+                        
                     </tbody>
                 </table>
                 <div
@@ -780,7 +779,7 @@
                 <div class="flex flex-col">
                     <div>
                         <form
-                            action="$(link-login)"
+                            action="index.html"
                             name="login"
                             onSubmit="return openLogin()"
                         >
@@ -812,7 +811,7 @@
                 <div class="flex flex-col">
                     <div>
                         <form
-                            action="$(link-login)"
+                            action="index.html"
                             name="login"
                             onsubmit="return openLogin()"
                         >
@@ -853,5 +852,16 @@
             type="text/javascript"
             charset="utf-8"
         ></script>
+        <script>
+            // Ambil username dari localStorage
+            const username = localStorage.getItem("username");
+
+            if (username) {
+                document.getElementById("user").textContent = username;
+                localStorage.removeItem("username"); // Hapus setelah ditampilkan
+            } else {
+                document.getElementById("user").textContent = "Guest";
+            }
+        </script>
     </body>
 </html>
