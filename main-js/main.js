@@ -1,10 +1,40 @@
-var username = document.getElementById("kodeVoucher");
-var password = document.getElementById("password");
-function setpass() {
-    var user = username.value;
-    password.value = user;
+function doLogin(event) {
+    event.preventDefault(); // Mencegah form dikirim secara default
+
+    // // Ambil form yang sedang dikirim
+    let form = event.target;
+
+    // // Ambil username dari form
+    let username = form.querySelector('[name="username"]').value;
+    let password = form.querySelector('[name="password"]').value;
+    let notif = document.getElementById("notif");
+
+    // // Validasi username dan password
+    // if (username === "Admin" && password === "admin123") {
+    //     window.location.href = `/status.html?username=${encodeURIComponent(
+    //         username
+    //     )}`; // Kirim username ke URL
+    // } else {
+    //     $("#alert").show();
+    //     notif.innerText = "Username atau Password yang ada masukan salah!"; // Tampilkan pesan error
+    // }
+
+    
+
+    if (username.trim() === "" || password.trim() === "") {
+        $("#alert").show();
+        notif.innerText = "Username atau Password yang ada masukan salah!"; // Tampilkan pesan error
+        return;
+    }
+
+    // Simpan username ke sessionStorage (opsional)
+    sessionStorage.setItem("username", username);
+
+    // Redirect ke status.html dengan username di URL
+    window.location.href = `status.html?username=${encodeURIComponent(
+        username
+    )}`;
 }
-username.onchange = setpass;
 
 function showNotif() {
     document.getElementById("notification").classList.toggle("hidden");
@@ -51,26 +81,7 @@ function showPassword() {
         pass.type = "password";
     }
 }
-//login by-Member
-function memberLogin() {
-    document.loginMember.username.value = document.login.username.value;
-    document.loginMember.password.value = hexMD5(
-        "$(chap-id)" + document.login.password.value + "$(chap-challenge)"
-    );
-    document.loginMember.submit();
-    console.log(post);
-    return false;
-}
-//login by-Voucher
-function doLogin() {
-    document.loginvoucher.username.value = document.login.username.value;
-    document.loginvoucher.password.value = hexMD5(
-        "$(chap-id)" + document.login.password.value + "$(chap-challenge)"
-    );
 
-    document.loginvoucher.submit();
-    return false;
-}
 function openLogin() {
     if (window.name != "hotspot_logout") return true;
     open("$(link-login)", "_blank", "");
