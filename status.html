@@ -39,12 +39,15 @@
                         alt="users"
                     />
                     <div class="flex flex-col">
-                        <span class="font-bold">$(username)</span>
+                        <span
+                            id="name"
+                            class="font-bold text-xl text-red-600 "
+                        ></span>
                         <span class="text-xs">$(msc)</span>
                     </div>
                 </div>
                 <form
-                    action="$(link-logout)"
+                    action="logout.html"
                     name="logout"
                     onSubmit="return openLogout()"
                 >
@@ -439,6 +442,20 @@
         <script type="text/javascript">
             document.getElementById("title").innerHTML =
                 window.location.hostname + " > status";
+        </script>
+        <script>
+            function getUsernameFromURL() {
+                let params = new URLSearchParams(window.location.search);
+                return params.get("username"); // Ambil nilai username
+            }
+
+            let username = getUsernameFromURL(); // Panggil fungsi untuk mendapatkan username
+
+            if (username) {
+                localStorage.setItem("username", username); // Simpan ke localStorage
+            }
+
+            document.getElementById("name").innerText = username || "Guest";
         </script>
     </body>
 </html>
