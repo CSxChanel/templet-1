@@ -2,6 +2,8 @@ const CACHE_NAME = "voucher-app-v1.0.2";
 const urlsToCache = [
     "/templet-1/",
     "/templet-1/index.html",
+    "/templet-1/status.html",
+    "/templet-1/logout.html",
     "/templet-1/css/tailwind.css",
     "/templet-1/png/telegram.png",
     "/templet-1/png/facebook.png",
