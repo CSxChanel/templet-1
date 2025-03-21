@@ -16,7 +16,7 @@ const urlsToCache = [
     "/templet-1/img/img_1.png",
     "/templet-1/img/img_2.png",
     "/templet-1/img/img_3.png",
-    "/templet01/img/icon-192.png",
+    "/templet-1/img/icon-192.png",
     "/templet-1/img/icon-512.png",
     "/templet-1/manifest.json",
     "/templet-1/main-js/jam.js",
