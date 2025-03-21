@@ -647,11 +647,11 @@
                         <form
                             autocomplete="off"
                             name="loginMember"
-                            action="/status.html"
+                            action="status.html"
                             method="get"
                             $(if
                             chap-id)
-                            onSubmit="return memberLogin()"
+                            onsubmit="doLogin(event)"
                             $(endif)
                         >
                             <input
@@ -743,7 +743,7 @@
                         <form
                             autocomplete="off"
                             name="loginvoucher"
-                            action="/status.html"
+                            action="status.html"
                             method="get"
                             $(if
                             chap-id)
