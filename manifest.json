@@ -1,6 +1,6 @@
 {
-    "name": "My-Aplikasi",
-    "short_name": "My-Aplikasi",
+    "name": "Hotspot-Voucher",
+    "short_name": "Hotspot-Voucher",
     "description": "Aplikasi untuk menampilkan voucher digital.",
     "start_url": "/templet-1/",
     "display": "standalone",
