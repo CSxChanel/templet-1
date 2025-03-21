@@ -643,12 +643,12 @@
                 <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <!-- Form member -->
                     <div class="py-6 mx-4 rounded-lg">
-                        $(if chap-id)
+                        
                         <form
                             autocomplete="off"
                             name="loginMember"
-                            action="$(link-login-only)"
-                            method="post"
+                            action="/status.html"
+                            method="get"
                             $(if
                             chap-id)
                             onSubmit="return memberLogin()"
@@ -680,9 +680,9 @@
                                     Lihat
                                 </button>
                             </div>
-                            $(if error)
+                            
                             <span class="text-xs text-red-700">$(error)</span>
-                            $(endif)
+                            
                             <div class="grid grid-cols-2 gap-4 mt-4 w-full">
                                 <button
                                     type="button"
@@ -711,7 +711,7 @@
                                 </h4>
                             </div>
                         </form>
-                        $(endif)
+                      
                     </div>
                 </div>
             </div>
@@ -739,12 +739,12 @@
                 <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <!-- Form Voucher -->
                     <div class="py-6 mx-4 rounded-lg">
-                        $(if chap-id)
+                        
                         <form
                             autocomplete="off"
                             name="loginvoucher"
-                            action="$(link-login-only)"
-                            method="post"
+                            action="/status.html"
+                            method="get"
                             $(if
                             chap-id)
                             onSubmit="return doLogin()"
@@ -767,9 +767,9 @@
                                     id="password"
                                 />
                             </div>
-                            $(if error)
+                            
                             <span class="text-sm text-red-700">$(error)</span>
-                            $(endif)
+                            
                             <div class="grid grid-cols-2 gap-4 mt-4 w-full">
                                 <button
                                     type="button"
@@ -798,7 +798,7 @@
                                 </h4>
                             </div>
                         </form>
-                        $(endif)
+                       
                     </div>
                 </div>
             </div>
