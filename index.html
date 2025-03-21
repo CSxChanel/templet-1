@@ -34,6 +34,25 @@
     </head>
 
     <body id="dark-mode">
+                <!-- TOMBOL INSTALL PWS -->
+        <button
+            id="install-button"
+            style="
+                display: none;
+                z-index: 9999px;
+                position: fixed;
+                bottom: 98px;
+                right: 20px;
+                padding: 10px 20px;
+                background: red;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            "
+        >
+            Install App
+        </button>
         <!-- HEADER -->
         <div class="menubar md:px-10 px-5 py-2 text-white">
             <div class="flex justify-between mt-2">
@@ -970,5 +989,46 @@
         </script>
 
         <!-- AHIR FUNCTION -->
+        
+        <!-- SCRIPT PWS -->
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker
+                    .register("/templet-1/sw.js")
+                    .then(reg =>
+                        console.log("Service Worker Registered:", reg.scope)
+                    )
+                    .catch(err =>
+                        console.log("Service Worker Registration Failed:", err)
+                    );
+            }
+        </script>
+
+        <script type="text/javascript" charset="utf-8">
+            let deferredPrompt;
+            window.addEventListener("beforeinstallprompt", event => {
+                event.preventDefault();
+                deferredPrompt = event;
+
+                // Tampilkan tombol install manual
+                const installButton = document.getElementById("install-button");
+                if (installButton) {
+                    installButton.style.display = "block";
+                    installButton.addEventListener("click", () => {
+                        deferredPrompt.prompt();
+                        deferredPrompt.userChoice.then(choiceResult => {
+                            if (choiceResult.outcome === "accepted") {
+                                console.log("User accepted the install prompt");
+                            } else {
+                                console.log(
+                                    "User dismissed the install prompt"
+                                );
+                            }
+                            deferredPrompt = null;
+                        });
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
